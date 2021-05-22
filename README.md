@@ -11,8 +11,13 @@ The POOT kiosks run on a Raspberry Pi 3 with the [Raspberry Pi Touch Display](ht
 7. Start the service on restart: `sudo systemctl enable kiosk.service`
 
 ## Useful Service Commands
-* Start the service on restart: `sudo systemctl enable kiosk.service`
-* Stop the service temporarily: `sudo systemctl stop kiosk.service`
-* Start the service: `sudo systemctl start kiosk.service`
-* Stop the service, until it's enabled again: \
+* Load service into systemd: \
+`sudo systemctl daemon-reload`
+* Enable the service to start on restart: \
+`sudo systemctl enable kiosk.service`
+* Start the service immediately: \
+`sudo systemctl start kiosk.service`
+* Stop the service temporarily: \
+`sudo systemctl stop kiosk.service`
+* Disable the service, until it's enabled again: \
 `sudo systemctl disable kiosk.service`
